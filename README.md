@@ -21,4 +21,18 @@ Behavioral history: Payment History, Bankruptcy History, Previous Defaults, Util
 I performed a data quality check to ensure it is clean and ready for analysis.
 These were the data issues I found and rectified
 1. **Missing Values**
-I used ``` workers.isnull().sum() ``` to find the columns that had missing values and the total number of missing values. I found them in the following columns
+I used ``` workers.isnull().sum() ``` to find the columns that had missing values and the total number of missing values. I found them in the following columns:
+```
+staff_id      0
+staff_name    1
+age           6
+gender        0
+join_date     0
+currency      5
+salary        5
+state         4
+dept_id       0
+dept_name     0
+d_o_b         0
+dtype: int64
+```
