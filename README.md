@@ -1,3 +1,2 @@
 # example
-
-![Dashboard](image/Capture.PNG)
+This EDA is to explore the loan application data to see patterns of loan applicants
