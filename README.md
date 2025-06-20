@@ -21,7 +21,7 @@ Behavioral history: Payment History, Bankruptcy History, Previous Defaults, Util
 I performed a data quality check to ensure it is clean and ready for analysis.
 These were the data issues I found and rectified
 1. **Missing Values**
-I used ``` workers.isnull().sum() ``` to find the columns that had missing values and the total number of missing values. I found them in the following columns:
+I used: ``` workers.isnull().sum() ``` to find the columns that had missing values and the total number of missing values. I found them in the following columns:
 ```
 staff_id      0
 staff_name    1
@@ -39,10 +39,6 @@ dtype: int64
 
 I rectified the missing rows in the age column by extracting the year from the D.O.B column and subtracting it from the current year (2025).
 
-2. ** Duplicate Values**
-I used
-```
-duplicates = workers[workers.duplicated(keep=False)]
-print(duplicates) 
-```
+2. **Duplicate Values**
+I used: ``` workers[workers.duplicated(keep=False)] ```
 
