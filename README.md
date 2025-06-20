@@ -36,3 +36,12 @@ dept_name     0
 d_o_b         0
 dtype: int64
 ```
+
+I rectified the missing rows in the age column by extracting the year from the D.O.B column and subtracting it from the current year (2025).
+
+2. ** Duplicate Values**
+I used ```
+duplicates = workers[workers.duplicated(keep=False)]
+print(duplicates) 
+```
+
