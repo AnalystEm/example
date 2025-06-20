@@ -81,6 +81,7 @@ staff_id      staff_name  age gender  join_date currency    salary   state  \
 
 ### Categorical Variable
 These are the categorical columns I performed univariate analysis on: Marital Status, etc.
+
 I did a frequency count for the Marital Status column using:
 ```
 import matplotlib.pyplot as plt
@@ -106,3 +107,13 @@ plt.show()
 **Result:**
 
 ![Marital Status Distribution](image/bar1.png)
+
+**Insight:**
+
+Married couples make up the most loan applicants with 10,000 applications. While widowed people have the least applications. (Get better insight from AI).
+
+### Numerical Variables
+
+## Bivariate Analysis
+
+### Categorical & Categorical Variables
