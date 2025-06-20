@@ -42,5 +42,26 @@ I rectified the missing rows in the age column by extracting the year from the D
 
 2. **Duplicate Values:**
 
-I used: ``` workers[workers.duplicated(keep=False)] ```
+I used: ``` workers[workers.duplicated(keep=False)] ``` to find duplicate rows and found the following:
+```
+staff_id      staff_name  age gender  join_date currency    salary   state  \
+19     W020   Joseph Stuart   45   Male 2019-06-24      NGN  120632.0  Rivers   
+47     W048    Gerald Davis   29   Male 2023-06-20      NGN  194232.0     Oyo   
+48     W049  Maureen Thomas   57   Male 2024-08-24      NGN  120280.0  Kaduna   
+49     W050  Charles Ingram   40   Male 2020-08-08      NGN  165492.0   Lagos   
+50     W048    Gerald Davis   29   Male 2023-06-20      NGN  194232.0     Oyo   
+51     W049  Maureen Thomas   57   Male 2024-08-24      NGN  120280.0  Kaduna   
+52     W050  Charles Ingram   40   Male 2020-08-08      NGN  165492.0   Lagos   
+53     W020   Joseph Stuart   45   Male 2019-06-24      NGN  120632.0  Rivers   
+
+    dept_id           dept_name      d_o_b  year  
+19        9          Operations 1980-05-14  1980  
+47        8               Legal 1996-11-26  1996  
+48       10  Product Management 1968-01-01  1968  
+49        3         Engineering 1985-01-16  1985  
+50        8               Legal 1996-11-26  1996  
+51       10  Product Management 1968-01-01  1968  
+52        3         Engineering 1985-01-16  1985  
+53        9          Operations 1980-05-14  1980
+```
 
