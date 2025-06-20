@@ -4,8 +4,11 @@ This EDA is to explore the loan application data to see patterns of loan applica
 
 ## Data
 This dataset was gotten from Kaggle. It contains 3000 rows and 20 columns. It is a loan application dataset that contains information about lenders':
+
 **Personal information:** Age, Marital Status, Education Level, Employment Status, Job Tenure
+
 **Financial status:** Annual Income, Monthly Income, Total Assets, Total Liabilities, Net Worth
+
 **Credit behavior:** Credit Score, Credit Card Utilization, Debt-to-Income Ratio, Number of Credit Lines
 
 
