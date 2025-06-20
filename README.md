@@ -1,3 +1,3 @@
 # example
 My dashboard
-![Title](image/Capture.PNG)
+![Dashboard](image/Capture.PNG)
