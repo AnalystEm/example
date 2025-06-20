@@ -47,6 +47,10 @@ dtype: int64
 ```
 
 I rectified the missing rows in the age column by extracting the year from the D.O.B column and subtracting it from the current year (2025).
+```
+workers['year'] = workers['d_o_b'].dt.year
+workers.loc[workers['age'].isnull(), 'age'] = 2025 - workers['year']
+```
 
 2. **Duplicate Values:**
 
@@ -84,3 +88,20 @@ import seaborn as sns
 
 de['MaritalStatus'].value_counts()
 ```
+**Result:**
+```
+Married     10041
+Single       6078
+Divorced     2882
+Widowed       999
+Name: MaritalStatus, dtype: int64
+```
+
+### Visualization
+**Bar Chart:**
+```
+de['MaritalStatus'].value_counts().plot(kind='bar')
+plt.show()
+```
+**Result:**
+![Marital Status Distribution](image/bar1.PNG)
