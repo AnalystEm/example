@@ -17,12 +17,20 @@ Loan details: Loan Amount, Duration, Purpose, Interest Rate, Base Interest Rate
 
 Behavioral history: Payment History, Bankruptcy History, Previous Defaults, Utility Bills Payment History
 
+I read in the dataset using:
+```
+import pandas as pd
+
+de = pd.read_excel('Loan.xlsx')
+de.head()
+```
+
 ## Data Cleaning
 I performed a data quality check to ensure it is clean and ready for analysis.
 These were the data issues I found and rectified
 1. **Missing Values:**
 
-I used: ``` workers.isnull().sum() ``` to find the columns that had missing values and the total number of missing values. I found them in the following columns:
+I used: ``` de.isnull().sum() ``` to find the columns that had missing values and the total number of missing values. I found them in the following columns:
 ```
 staff_id      0
 staff_name    1
@@ -42,7 +50,7 @@ I rectified the missing rows in the age column by extracting the year from the D
 
 2. **Duplicate Values:**
 
-I used: ``` workers[workers.duplicated(keep=False)] ``` to find duplicate rows and found the following:
+I used: ``` de[de.duplicated(keep=False)] ``` to find duplicate rows and found the following:
 ```
 staff_id      staff_name  age gender  join_date currency    salary   state  \
 19     W020   Joseph Stuart   45   Male 2019-06-24      NGN  120632.0  Rivers   
@@ -65,3 +73,14 @@ staff_id      staff_name  age gender  join_date currency    salary   state  \
 53        9          Operations 1980-05-14  1980
 ```
 
+## Univariate Analysis & Insights
+
+### Categorical Variable
+These are the categorical columns I performed univariate analysis on: Marital Status, etc.
+I did a frequency count for the Marital Status column using:
+```
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+de['MaritalStatus'].value_counts()
+```
