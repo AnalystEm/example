@@ -104,4 +104,5 @@ de['MaritalStatus'].value_counts().plot(kind='bar')
 plt.show()
 ```
 **Result:**
+
 ![Marital Status Distribution](image/bar1.png)
